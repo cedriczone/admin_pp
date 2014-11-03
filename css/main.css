@@ -1,0 +1,136 @@
+@charset "iso-8859-2";
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+}
+#header {
+	background-color: #F0F0F0;
+}
+#footer {
+}
+.space30{height: 30px;}
+.cache{display: none;}
+.titre_principal {
+	font-family: Geneva, Arial, Helvetica, sans-serif, "Trebuchet MS";
+	font-size: 48px;
+	font-style: italic;
+	font-weight: bold;
+	color: #6F1A26;
+	text-decoration: none;
+	margin-top: 10px;
+	margin-left: 50px;
+	padding-bottom: 10px;
+}
+#users {
+	background-color: #DFE9EC;
+}
+#infos {
+	background-color: #FAF1DE;
+}
+#docs {
+	background-color: #E8FDEA;
+}
+#plannings {
+	background-color: #F2F0F4;
+}
+#forum {
+	background-color: #FFFFEA;
+}
+#menu p {
+	padding: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+#menu li {
+	list-style-type: none;
+	margin: 0px;
+	padding-top: 2px;
+	padding-right: 0px;
+	padding-bottom: 2px;
+	padding-left: 0px;
+}
+#menu ul {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+#menu a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #353535;
+	text-decoration: none;
+}
+#menu a:hover {
+	text-decoration: underline;
+}
+
+
+#menu {
+	float: left;
+	width: 200px;
+	padding-left: 5px;
+}
+#menu div {
+	padding: 3px;
+	margin-bottom: 3px;
+	border: 1px dotted #C0C0C0;
+}
+
+#footer {
+	clear: both;
+	margin-top: 20px;
+	background-color: #F0F0F0;
+}
+#deconnect {
+	background-color: #E6FEFF;
+}
+.suppr {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #A01215;
+	text-decoration: none;
+}
+
+#main {
+	margin-left: 210px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #666666;
+	width: 550px;
+	padding-left: 20px;
+}
+#form_modif {
+	margin: 0px;
+	padding: 0px;
+}
+.bords_pointilles {
+	border: 1px dotted #666666;
+}
+
+#main table {
+	border: 1px dotted #999999;
+}
+.modif {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #D7651A;
+	text-decoration: none;
+}
+.liens_docs {
+	text-decoration: none;
+	color: #000000;
+}
+.liens_docs:hover  {
+	text-decoration: underline;
+	color: #666666;
+}
