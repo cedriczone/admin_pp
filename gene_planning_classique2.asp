@@ -812,7 +812,7 @@ else
 	addcoord.open SQLaddcoord,conn2,3,3
 end if
 
-for s=0 to 8
+for s=0 to 7
 
 	Select Case s
 		Case 0,1,2,3
@@ -821,17 +821,16 @@ for s=0 to 8
 			Ztype="mineur"
 		Case 6,7
 			Ztype="etr"
-		Case 8
-			Ztype="ho"
 	End Select
 
-	SQLverifcpt = "SELECT * FROM [cpt_pp] WHERE num_avo="&tab_inters(s)
+	SQLverifcpt = "SELECT * FROM [cpt_pp] WHERE (num_avo="&tab_inters(s)&") AND (type='"&Ztype&"')"
 	Set rsverifcpt= Server.CreateObject("ADODB.RecordSet")
 	rsverifcpt.open SQLverifcpt,conn2,3,3
 	nb_trouve = rsverifcpt.recordcount
+	
 	if nb_trouve=1 then
 		nbcpt = rsverifcpt("cpt")+1
-		SQLmodifcpt="UPDATE [cpt_pp] set cpt="&nbcpt&" WHERE num_avo="&tab_inters(s)
+		SQLmodifcpt="UPDATE [cpt_pp] set cpt="&nbcpt&" WHERE (num_avo="&tab_inters(s)&") AND (type='"&Ztype&"')"
 		Set modifcpt= Server.CreateObject("ADODB.RecordSet")
 		modifcpt.open SQLmodifcpt,conn2,3,3
 	else
@@ -840,24 +839,6 @@ for s=0 to 8
 		add1.open SQLadd1,conn2,3,3
 	end if
 next
-
-for t=0 to 2
-	SQLverifcpt2 = "SELECT * FROM [cpt_pp] WHERE num_avo="&tab_obs(t)
-	Set rsverifcpt2= Server.CreateObject("ADODB.RecordSet")
-	rsverifcpt2.open SQLverifcpt2,conn2,3,3
-	nb_trouve2 = rsverifcpt2.recordcount
-	if nb_trouve2=1 then
-		nbcpt = rsverifcpt2("cpt")+1
-		SQLmodifcpt2="UPDATE [cpt_pp] set cpt="&nbcpt&" WHERE num_avo="&tab_obs(t)
-		Set modifcpt2= Server.CreateObject("ADODB.RecordSet")
-		modifcpt2.open SQLmodifcpt2,conn2,3,3
-	else
-		SQLadd2="Insert Into [cpt_pp](num_avo,cpt) Values("&tab_obs(t)&",1)"
-		Set add2= Server.CreateObject("ADODB.RecordSet")
-		add2.open SQLadd2,conn2,3,3
-	end if
-next
-
 
 erase tab_inters
     
